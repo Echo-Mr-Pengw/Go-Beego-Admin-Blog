@@ -20,11 +20,11 @@ type BaseController struct {
 }
 
 // 权限认准
-func (b *BaseController) prepare() {
+func (b *BaseController) Prepare() {
 	// 获取客户端传的cookie
 	clicentUid   := b.Ctx.GetCookie("uid")
 	clientToken := b.Ctx.GetCookie("token")
-
+	beego.Info(clicentUid, clientToken, 1111)
 	if clicentUid == "" || clientToken == "" {
 		b.Redirect("/admin", 302)
 	}
@@ -35,6 +35,7 @@ func (b *BaseController) prepare() {
 	if sess == nil {
 		b.Redirect("/admin", 302)
 	}
+
 	// 客户端传的token与服务端不匹配
 	if clientToken != sess {
 		b.Redirect("/admin", 302)

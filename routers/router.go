@@ -11,7 +11,7 @@ func init() {
 	// 后台登录页面
     beego.Router("/admin", &admin.IndexController{}, "*:Index")
     // 后台登录请求接口
-    beego.Router("/admin/login", &admin.UserController{}, "post:Login")
+    beego.Router("/admin/login", &admin.IndexController{}, "post:Login")
     // 后台登录成功后的主页面
     beego.Router("/admin/index", &admin.UserController{}, "*:Index")
     // 后台用户注销接口
