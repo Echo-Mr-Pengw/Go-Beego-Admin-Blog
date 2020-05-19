@@ -1,5 +1,4 @@
 // 数据库初始操作
-
 package models
 
 import (
@@ -20,7 +19,8 @@ func init() {
 
 	dataSource := mysqlUser + ":" + mysqlPass + "@tcp(" + mysqlHost + ":" + mysqlPort + ")/" + mysqlDb + "?charset=utf8"
 	// beego.Info(dataSource)
-	orm.RegisterModel(new(User), new(Tag))
+	orm.RegisterModelWithPrefix("tbl_", new(User), new(Tag), new(Article), new(AuthList), new(AuthGroup))
+	// orm.RegisterModel(new(User), new(Tag), new(Article))
 	orm.RegisterDriver(driverName, orm.DRMySQL)
 	orm.RegisterDataBase("default", driverName, dataSource)
 	orm.RunSyncdb("default", false, true)
