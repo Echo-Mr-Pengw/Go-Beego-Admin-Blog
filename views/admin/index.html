@@ -22,7 +22,7 @@
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="/admin">new1024kb后台</a></div>
+        <a href="/admin/index">new1024kb后台</a></div>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item to-index">
             <a href="/admin/logout">退出</a></dd>
@@ -40,12 +40,12 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('标签列表','cate.html')">
+                        <a onclick="xadmin.add_tab('标签列表','/admin/tag/ls')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>标签列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('文章列表','cate.html')">
+                        <a onclick="xadmin.add_tab('文章列表','/admin/article/ls')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>文章列表</cite></a>
                     </li>
@@ -76,12 +76,12 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('订单列表','order-list.html')">
+                        <a onclick="xadmin.add_tab('订单列表','/admin/auth/ls')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('权限分组','order-list1.html')">
+                        <a onclick="xadmin.add_tab('权限分组','/admin/auth/groupls')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限分组</cite></a>
                     </li>

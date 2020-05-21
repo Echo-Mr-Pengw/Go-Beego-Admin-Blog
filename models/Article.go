@@ -4,7 +4,7 @@ package models
 import "time"
 
 type Article struct {
-	Id uint `json:"id" orm:"pk; description(主键)"`                                                 // 自增主键
+	Id uint `json:"id" orm:"pk, description(主键)"`                                                 // 自增主键
 	Tagid uint16 `json:"tagid" orm:"description(标签id)"`                                           // 标签id
 	Title string `json:"title" orm:"description(文章标题)"`                                         // 文章标题
 	Content string `json:"content" orm:" type(text); description(文章内容)"`                        // 文章内容
