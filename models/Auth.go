@@ -14,7 +14,7 @@ type AuthList struct {
 // 权限分组
 type AuthGroup struct {
 	Id uint `json:"id" orm:"description(主键),pk"`                                                 // 主键
-	Authid uint16 `json:"authid" orm:"description(权限id)"`                                        // 权限id
+	Authid string `json:"authid" orm:"description(权限id)"`                                        // 权限id
 	Groupname string `json:"groupname" orm:"description(分组名)"`                                  // 分组名
 	Addtime time.Time `json:"addtime" orm:"auto_now_add; type(datetime); description(添加时间)"`  // 添加时间
 }
